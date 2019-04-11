@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="RCDBContext-Web.config Connection String" description="RCDBContext A Cadeia de Conexão usada em web.config pelo aplicativo para acessar o banco de dados." defaultValue="Data Source=azurserv.database.windows.net;Initial Catalog=DB_APP;Integrated Security=False;User ID=melquelima;Password=Qwerty333 ;Connect Timeout=60" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\melqu\\Google\ Drive\\WEB\\Visual\ Studio\\padrao\\padrao\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='RCDBContext']/@connectionString" />
+  </parameter>
+</parameters>

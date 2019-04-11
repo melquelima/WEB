@@ -1,0 +1,12 @@
+C:\Users\melqu\Google Drive\WEB\Visual Studio\padrao\padrao.Entidade\bin\Debug\padrao.Entidade.dll
+C:\Users\melqu\Google Drive\WEB\Visual Studio\padrao\padrao.Entidade\bin\Debug\padrao.Entidade.pdb
+C:\Users\melqu\Google Drive\WEB\Visual Studio\padrao\padrao.Entidade\obj\Debug\padrao.Entidade.csproj.CoreCompileInputs.cache
+C:\Users\melqu\Google Drive\WEB\Visual Studio\padrao\padrao.Entidade\obj\Debug\padrao.Entidade.dll
+C:\Users\melqu\Google Drive\WEB\Visual Studio\padrao\padrao.Entidade\obj\Debug\padrao.Entidade.pdb
+C:\Users\melqu\Google Drive\WEB\Visual Studio\padrao\padrao.Entidade\bin\Debug\padrao.Entidade.dll.config
+C:\Users\melqu\Google Drive\WEB\Visual Studio\padrao\padrao.Entidade\bin\Debug\EntityFramework.dll
+C:\Users\melqu\Google Drive\WEB\Visual Studio\padrao\padrao.Entidade\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\melqu\Google Drive\WEB\Visual Studio\padrao\padrao.Entidade\bin\Debug\EntityFramework.xml
+C:\Users\melqu\Google Drive\WEB\Visual Studio\padrao\padrao.Entidade\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\melqu\Google Drive\WEB\Visual Studio\padrao\padrao.Entidade\obj\Debug\padrao.Entidade.csprojAssemblyReference.cache
+C:\Users\melqu\Google Drive\WEB\Visual Studio\padrao\padrao.Entidade\obj\Debug\padrao.Entidade.csproj.CopyComplete

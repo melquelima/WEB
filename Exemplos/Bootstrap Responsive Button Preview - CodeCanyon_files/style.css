@@ -1,0 +1,303 @@
+/*style button*/
+
+.buttonSquare {
+  width: 100%;border-radius: 0px;
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  position: relative;
+  cursor: pointer;
+  margin: 0px 0 4px 0;
+  padding: 15px 0px 15px 0px;
+  border: none;
+  font: normal 18px "Roboto", Helvetica, sans-serif;
+  color: rgba(255,255,255,0.9);
+  text-transform: capitalize;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: #686d6e;
+  text-shadow: 0 0 0 rgba(239,245,247,1);
+  transition: all 0.2s;
+}
+.buttonRounded {
+  width: 100%;border-radius: 10px;
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  position: relative;
+  cursor: pointer;
+  margin: 0px 0 4px 0;
+  padding: 15px 0px 15px 0px;
+  border: none;
+  font: normal 18px "Roboto", Helvetica, sans-serif;
+  color: rgba(255,255,255,0.9);
+  text-transform: capitalize;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: #686d6e;
+  text-shadow: 0 0 0 rgba(239,245,247,1);
+  transition: all 0.2s;
+}
+
+button{
+  height: 32px;
+}
+/* remember to define focus styles! */
+:focus {
+outline: 0;
+}
+
+.buttonSquare span,.buttonRounded span{position:absolute;left: 78px;top:20px;font: normal 18px "Roboto", Helvetica, sans-serif;text-transform: uppercase;}
+.buttonSquare i,.buttonRounded i{
+  color: white;
+  font-size: 32px;
+  margin: 0 0 0 17px;
+  z-index: 9999;
+  position: relative;
+}
+button.buttonSquare i,button.buttonRounded i{
+  color: white;
+  font-size: 32px;
+  margin: 0;
+  z-index: 9999;
+  position: absolute;
+  left: 18px;
+  top:15px;
+}
+
+
+.buttonSquare:hover,.buttonRounded:hover,
+button.buttonSquare:hover,button.buttonRounded:hover {
+  text-shadow: 0 0px 0px rgba(87,151,180,0.36) ;
+  transition: all 0.3s;
+}
+.buttonSquare:active,.buttonSquare:focus,
+.buttonRounded:active,.buttonRounded:focus {
+  top: 0;
+  background: #8e9292;
+  -webkit-transform-origin: 50% 100% 0;
+  -moz-transform-origin: 50% 100% 0;
+  -o-transform-origin: 50% 100% 0;
+  -ms-transform-origin: 50% 100% 0;
+  transform-origin: 50% 100% 0;
+  -ms-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+/* Disablow Buttons Style*/
+.buttonRounded.disablow,
+.buttonSquare.disablow{
+  opacity: 0.8;
+  background: gray;
+  cursor: default;
+  text-shadow: none;
+}
+button[disabled], html input[disabled]{
+  opacity: 0.8;
+  background: gray;
+  cursor: default;
+  text-shadow: none;
+}
+.buttonSquare:disabled:active,
+.buttonRounded:disabled:active,
+.buttonRounded.disablow:active,
+.buttonSquare.disablow:active{
+  background: gray;
+  opacity: 0.8;
+}
+.buttonRounded.disablow:hover,
+.buttonSquare.disablow:hover{
+  text-shadow: none;
+}
+
+
+.buttonSquare::before {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 63px;
+  height: 100%;
+  position: absolute;
+  content: "";
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  border: none;
+  color: rgba(0,0,0,0.9);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background:rgba(0,0,0,0.3);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  -webkit-background-size: 48px auto;
+  background-size: 48px auto;
+ transition: all 0.2s;
+}
+.buttonRounded::before
+{
+  display: inline-block;
+  border-radius:10px 0 0 10px; 
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 63px;
+  height: 100%;
+  position: absolute;
+  content: "";
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  border: none;
+  color: rgba(0,0,0,0.9);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background:rgba(0,0,0,0.3);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  -webkit-background-size: 48px auto;
+  background-size: 48px auto;
+ transition: all 0.2s;
+}
+
+/*Colors*/
+
+.darkpink{background: #e798ba;}
+.darkpink:active,.darkpink:focus {background: #edb2cb;}
+.lightpink{background: #fa6374;}
+.lightpink:active,.lightpink:focus {background: #fb8a97;}
+.darkorange{background: #ba6200;}
+.darkorange:active,.darkorange:focus {background: #cb8940;}
+.orangeplus{background: #fc7736;}
+.orangeplus:active,.orangeplus:focus {background: #fd9968;}
+.orange{background: #d35400;}
+.orange:active,.orange:focus {background: #de7f40;}
+.orangelight{background: #f7941d;}
+.orangelight:active,.orangelight:focus {background: #f9af56;}
+.orangelightplus{background: #f39c12;}
+.orangelightplus:active,.orangelightplus:focus {background: #f6b54d;}
+.orangeblind{background: #f8b243;}
+.orangeblind:active,.orangeblind:focus {background: #fac572;}
+.yellow{background: #f3cf3f;}
+.yellow:active,.yellow:focus {background: #f6db6f;}
+.muddygreen{background: #9e9a27;}
+.muddygreen:active,.muddygreen:focus {background: #ada563;}
+.muddygreenplus{background: #a9baa2;}
+.muddygreenplus:active,.muddygreenplus:focus {background: #bfcbb9;}
+.green{background: #01b169;}
+.green:active,.green:focus {background: #62d995;}
+.greenplus{background: #16a085;}
+.greenplus:active,.greenplus:focus {background: #50b8a4;}
+.anothergreen{background: #52be7f;}
+.anothergreen:active,.anothergreen:focus {background: #7dce9f;}
+.lightgreen{background: #82d8b5;}
+.lightgreen:active,.lightgreen:focus {background: #a1e2c8;}
+.lightgreenplus{background: #47c9af;}
+.lightgreenplus:active,.lightgreenplus:focus {background: #75d7c3;}
+.lightgreentwoplus{background: #5aada2;}
+.lightgreentwoplus:active,.lightgreentwoplus:focus {background: #83c2b9;}
+.darkgreen{background: #8ba987;}
+.darkgreen:active,.darkgreen:focus {background: #bfcbb9;}
+.darkgreenplus{background: #067a6b;}
+.darkgreenplus:active,.darkgreenplus:focus {background: #449b90;}
+.lightred{background: #f26c63;}
+.lightred:active,.lightred:focus {background: #f5918a;}
+.red{background: #e74c3c;}
+.red:active,.red:focus {background: #ed796d;}
+.muddyred{background: #cc6055;}
+.muddyred:active,.muddyred:focus {background: #d98880;}
+.lime{background: #cfe374;}
+.lime:active,.lime:focus {background: #dbea97;}
+.gray{background: #5f5e61;}
+.gray:active,.gray:focus {background: #878689;}
+.black{background: #2d2e2b;}
+.black:active,.black:focus {background: #626260;}
+.beige{background: #b69f76;}
+.beige:active,.beige:focus{background: #c8b798;}
+.beigeplus{background: #e39568;}
+.beigeplus:active,.beigeplus:focus{background: #eab08e;}
+.brown{background: #9a6362;}
+.brown:active,.brown:focus {background: #b38a89;}
+.brownlight{background: #a87878;}
+.brownlight:active,.brownlight:focus {background: #be9a9a;}
+.darkbrown{background: #52323a;}
+.darkbrown:active,.darkbrown:focus {background: #7d656b;}
+.darkpurple{background: #584c58;}
+.darkpurple:active,.darkpurple:focus {background: #827982;}
+.lightpurple{background: #55367a;}
+.lightpurple:active,.lightpurple:focus {background: #80689b;}
+.lightpurpleplus{background: #af7ac4;}
+.lightpurpleplus:active,.lightpurpleplus:focus {background: #c39bd3;}
+.purple{background: #8e44ad;}
+.purple:active,.purple:focus {background: #aa73c2;}
+.purpleplus{background: #ae5e9b;}
+.purpleplus:active,.purpleplus:focus {background: #c286b4;}
+.anotherpurple{background: #9c00c5;}
+.anotherpurple:active,.anotherpurple:focus {background: #b540d4;}
+.muddypurple{background: #807399;}
+.muddypurple:active,.muddypurple:focus {background: #a096b3;}
+.azure{background: #00a2d3;}
+.azure:active,.azure:focus {background: #40b9de;}
+.blue{background: #024883;}
+.blue:active,.blue:focus {background: #4176a2;}
+.bluelight{background: #80a8cc;}
+.bluelight:active,.bluelight:focus {background: #a0bed9;}
+.bluelightplus{background: #6ab1b8;}
+.bluelightplus:active,.bluelightplus:focus {background: #8fc5ca;}
+.blueplus{background: #2980b9;}
+.blueplus:active,.blueplus:focus {background: #5fa0cb;}
+.darkblue{background: #34495e;}
+.darkblue:active,.darkblue:focus {background: #677786;}
+.darkbluelight{background: #484860;}
+.darkbluelight:active,.darkbluelight:focus {background: #767688;}
+.darkbluelightplus{background: #60677a;}
+.darkbluelightplus:active,.darkbluelightplus:focus {background: #888d9b;}
+
+/*new colors 03.04.2015*/
+
+.darkgreenextended{background: #07633e;}
+.darkgreenextended:active,.darkgreenextended:focus {background: #247c58;}
+.deepsea{background: #0f7066;}
+.deepsea:active,.deepsea:focus {background: #22847a;}
+.deeppurple{background: #331a4d;}
+.deeppurple:active,.deeppurple:focus {background: #52376e;}
+.deeporange{background: #ff5b0b;}
+.deeporange:active,.deeporange:focus {background: #f67a3e;}
+.pinklight{background: #de0063;}
+.pinklight:active,.pinklight:focus {background: #ee2c82;}
+.deepbrown{background: #830f12;}
+.deepbrown:active,.deepbrown:focus {background: #8f282a;}
+.amethyst{background: #1abc9c;}
+.amethyst:active,.amethyst:focus {background: #3aceb1;}
+.concrete{background: #95a5a6;}
+.concrete:active,.concrete:focus {background: #b5b5b5;}
+.graphite{background: #454545;}
+.graphite:active,.graphite:focus {background: #626161;}
+.asphalt{background: #34495e;}
+.asphalt:active,.asphalt:focus {background: #4f647a;}
+
+/*Validation*/
+
+.notification_ok{
+  background: #40b9de;
+  color: #fff;
+  margin: 0px 3px 4px 2px;
+  padding: 14px 21px;
+  font-family: 'Open Sans';
+  font-size: 20px;
+  font-weight: 300;
+}
+.notification_error{
+  background: #fa6374;
+  color: #fff;
+  margin: 0px 3px 4px 2px;
+  padding: 14px 21px;
+  font-family: 'Open Sans';
+  font-size: 20px;
+  font-weight: 300;
+}

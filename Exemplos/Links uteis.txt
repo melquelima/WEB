@@ -1,0 +1,3 @@
+http://bootboxjs.com/examples.html - > link com confirmaçoes em formato de caixa de dialogo
+
+https://bootsnipp.com/snippets/1K9mZ - > template de tabela

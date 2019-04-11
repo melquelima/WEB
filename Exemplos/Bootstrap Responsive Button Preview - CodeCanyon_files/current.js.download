@@ -1,0 +1,67 @@
+var fixed_menu = true;
+window.jQuery = window.$ = jQuery;
+
+jQuery(document).ready(function() {
+	"use strict";
+
+	// Contact Form
+	jQuery("#form2").submit(function() {
+		var str = $(this).serialize();		
+		$.ajax({
+			type: "POST",
+			url: "contact_form/contact_process.php",
+			data: str,
+			success: function(msg) {
+				// Message Sent - Show the 'Thank You' message and hide the form
+				if(msg == 'OK') {
+					var result = '<div class="notification_ok">Your message has been sent. Thank you!</div>';
+					//jQuery("#fields").hide();
+				} else {
+					var result = '<div class="notification_error">'+msg+'</div>';
+				}
+				jQuery('#note').html(result);
+			}
+		});
+		return false;
+	});	
+
+	jQuery("#form3").submit(function() {
+		var str = $(this).serialize();		
+		$.ajax({
+			type: "POST",
+			url: "contact_form/contact_process.php",
+			data: str,
+			success: function(msg) {
+				// Message Sent - Show the 'Thank You' message and hide the form
+				if(msg == 'OK') {
+					var result = '<div class="notification_ok">Your message has been sent. Thank you!</div>';
+					//jQuery("#fields").hide();
+				} else {
+					var result = '<div class="notification_error">'+msg+'</div>';
+				}
+				jQuery('#note2').html(result);
+			}
+		});
+		return false;
+	});	
+
+		jQuery("#form4").submit(function() {
+		var str = $(this).serialize();		
+		$.ajax({
+			type: "POST",
+			url: "contact_form/contact_process.php",
+			data: str,
+			success: function(msg) {
+				// Message Sent - Show the 'Thank You' message and hide the form
+				if(msg == 'OK') {
+					var result = '<div class="notification_ok">Your message has been sent. Thank you!</div>';
+					jQuery("#fields3").hide();
+				} else {
+					var result = '<div class="notification_error">'+msg+'</div>';
+				}
+				jQuery('#note3').html(result);
+			}
+		});
+		return false;
+	});	
+});

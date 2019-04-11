@@ -1,0 +1,121 @@
+/*base style*/
+body{  background:#212e3b;}
+h1,h2,h3,h4,h5,h6{
+  color: #ffffff;
+   margin:15px 0;
+}
+h1{   font: normal 48px "Roboto", Helvetica, sans-serif;}
+h2{   font: normal 24px "Roboto", Helvetica, sans-serif;}
+h3{   font: normal 32px "Roboto", Helvetica, sans-serif;}
+p{color: #fff;font: normal 18px "Roboto", Helvetica, sans-serif;}
+
+h3 a,h3 a:active,h3 a:visited{
+  color: #80a8cc;
+  text-decoration: underline;
+  transition:all 0.5s ease;
+}
+
+h3 a:hover{
+  color: #fff;
+  opacity: 0.5;
+  transition:all 0.5s ease;
+}
+
+.brb_wrapper{
+  background:#212e3b;
+  min-height: 100%;
+  padding: 100px 0;
+}
+.logo{
+  background: url('../images/logo.png') center center no-repeat;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  border: solid 1px #fff;
+}
+.logo a{
+  display: block;
+  width: 120px;
+  height: 120px;
+}
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 2px;
+  padding-left: 2px;
+}
+
+.brb_form {margin: 0px 0 0px 0;}
+.brb_form_bottom{margin-bottom:11px; }
+.brb_form input[type="text"]{
+  width: 100%;
+  border: solid 1px #dedbdb;
+  padding: 15px 20px 15px 20px;
+  font: normal 18px "Roboto", Helvetica, sans-serif;
+  outline: 0;
+  margin: 0px 0px 4px 0px;
+  background: #dedbdb;
+}
+.brb_form textarea{
+  width: 100%;
+  border: solid 1px #dedbdb;
+  padding: 15px 20px 15px 20px;
+  font: normal 18px "Roboto", Helvetica, sans-serif;
+  outline: 0;
+  margin: 0px 0 10px 0;
+  background: #dedbdb;
+}
+
+.test_form{
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+.form_text{
+  text-align: left;
+  width: 15%;
+  float: left;
+}
+.form_data{
+  text-align: left;
+  float: left;
+  width: 80%;
+  text-align: justify;
+}
+.clear{clear: both;}
+.back a{
+  text-decoration: none;
+  font-size: 16px; 
+}
+.back a:hover{
+  color: #00a2d3;
+}
+/*Media Queries*/
+@media (max-width: 778px) {
+  .brb_wrapper{
+     padding: 30px 0;
+  }
+  .container{
+    padding: 20px;
+  }
+  #brb_form input[type="text"]{
+   margin: 0px 0px 14px 0px;
+  }
+  #brb_form textarea{
+    margin-bottom:10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form_text{
+  text-align: left;
+  width: 35%;
+  float: left;
+}
+.form_data{
+  text-align: left;
+  float: left;
+  width: 60%;
+  text-align: justify;
+}
+}

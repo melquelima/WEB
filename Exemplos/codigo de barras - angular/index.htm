@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+		<script type="text/javascript" src="script.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+
+</head>
+<body ng-app="Test">
+
+    <label> Product </label>
+
+
+		<div ng-controller="ProductController">
+
+      <div data-ng-repeat="food in foods">
+        <div class="form-group title-field">
+          <select  ng-model="food.selectproduct" >
+            <option value="1">0101003 - Min. Diet pesce 2 Scd</option>
+            <option value="2">0101004 - Min. Maint pesce 4 Scm</option>
+            <option value="3">0101115 - Min. Diet pesce 1.5 Scd</option>
+          </select>
+          <input type="hidden">
+          <button data-ng-click="removeItem($index)" class="btn delete-field-{{$index}}">
+            Delete
+          </button>
+        </div>
+        
+        <div class="form-group">
+            <label> QUANTITY 1 </label>
+            <input type="text" class="form-control" data-ng-model="food.Quantity1" id="barcodeValue1" >
+        </div>
+        
+        <div class="form-group">
+            <label> QUANTITY 2 </label>
+            <input type="text" class="form-control" data-ng-model="food.Quantity2" id="barcodeValue2">
+        </div>
+        
+        <div class="ean">
+          <h2> CODE: </h2>
+          <barcode food="food"></barcode>
+        </div>
+        {{food | json}}
+      </div>
+      
+      <button data-ng-click="cloneItem()" class="btn inline">
+        Add
+      </button>
+    
+		</div>
+
+
+</body>
+
+
+
+</html>

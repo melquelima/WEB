@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="App">
+
+  <head>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  </head>
+
+  <body>
+    <h1>Hello Plunker!</h1>
+    
+    <div class="container-fluid">
+      <div ng-controller="mainCtrl">
+        
+        <table class="table table-striped table-hover table-bordered">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="obj in objects | filter : paginate">
+              <td>{{obj.id}}</td>
+              <td>{{obj.name}}</td>
+            </tr>
+          </tbody>
+        </table>
+        <pagination total-items="totalItems" ng-model="currentPage" max-size="50" boundary-links="false"
+          items-per-page="numPerPage" class="pagination-sm">
+        </pagination>
+      </div> 
+    </div>
+    
+
+    
+    <script src="http://code.angularjs.org/1.2.16/angular.js"></script>
+    <script src="http://code.angularjs.org/1.2.16/angular-resource.js"></script>
+    <script src="bootstrap-11.js"></script>
+    <script src="script.js"></script>
+  </body>
+
+</html>

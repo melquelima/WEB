@@ -1,0 +1,290 @@
+﻿
+@{
+    ViewBag.Title = "cadastro";
+}
+
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+<link href="~/Content/Cadastro/material-bootstrap-wizard.css" rel="stylesheet" />
+<script src="~/Scripts/Cadastro/CEP.js"></script>
+<script src="~/Scripts/Cadastro/onlyNumbers.js"></script>
+<link href="~/Content/alertOk.css" rel="stylesheet" />
+<link href="~/Content/loading2.css" rel="stylesheet" />
+<!--------------------------------------------ALERT OK---------------------------------->
+<div id="myModal" class="modal fade">
+    <div class="modal-dialog modal-confirm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="icon-box">
+                    <i class="material-icons">&#xE876;</i>
+                </div>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body text-center">
+                <h4>Concluído!</h4>
+                <p>Seu cadastro foi efetuado com sucesso!.</p>
+                <button class="btn btn-success" data-dismiss="modal"><span style="    font-weight: 1000;">Começar a utilizar</span> <i class="material-icons">&#xE5C8;</i></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!---------------------------------------------------CONTEUDO------------------------>
+<div class="image-container set-full-height">
+
+    <!--  Made With Material Kit  -->
+    <!--   Big container   -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <!--      Wizard container        -->
+                <div class="wizard-container">
+                    <div class="card wizard-card" data-color="green" id="wizardProfile">
+                        
+                        <form action="Teste" method="GET">
+                            <!--        You can switch " data-color="purple" "  with one of the next bright colors: "green", "orange", "red", "blue"       -->
+
+                            <div class="wizard-header">
+                                <h3 class="wizard-title">
+                                    Cadastro
+                                </h3>
+                                <h5>Preencha as informações abaixo</h5>
+                            </div>
+                            <div class="wizard-navigation">
+                                <ul>
+                                    <li><a href="#about" data-toggle="tab">Pessoal</a></li>
+                                    <li><a href="#account" data-toggle="tab">Endereço</a></li>
+                                    <li><a href="#address" data-toggle="tab">Empresa</a></li>
+                                    <li><a href="#passwd" data-toggle="tab">Acesso</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="tab-content">
+                                <div class="tab-pane" id="about">
+                                    <div class="row">
+                                        <h4 class="info-text">Vamos começar com suas informações básicas</h4>
+                                        <div class="col-sm-4 col-sm-offset-1">
+                                            <div class="picture-container">
+                                                <div class="picture">
+                                                    <img src="~/Content/images/default-avatar.png" class="picture-src" id="wizardPicturePreview" title="" />
+                                                    <input type="file" id="wizard-picture">
+                                                </div>
+                                                <h6>Choose Picture</h6>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-6">
+
+                                            <div class="input-group">
+                                                <span class="input-group-addon" style="border: 0">
+                                                    <i class="material-icons">portrait</i>
+                                                </span>
+                                                <div class="form-group label-floating">
+                                                    <label class="camposCadastro">CPF<span id="errCPF" style="color:red;display:none">&nbsp</span></label>
+                                                    <input type="number" name="CPF" id="CPF" class="form-control cadastroinpt" oninput="ativacampo(5)" style="text-transform: uppercase;">
+                                                </div>
+                                            </div>
+
+                                            <div class="input-group">
+                                                <span class="input-group-addon" style="border: 0">
+                                                    <i class="material-icons">face</i>
+                                                </span>
+                                                <div class="form-group label-floating">
+                                                    <label class="camposCadastro">Nome Completo</label>
+                                                    <input ident="A1" name="nome" id="nome" type="text" class="form-control cadastroinpt" style="text-transform: uppercase;">
+                                                </div>
+                                            </div>
+
+                                            <div class="input-group">
+                                                <span class="input-group-addon" style="border: 0">
+                                                    <i class="material-icons">phone</i>
+                                                </span>
+                                                <div class="form-group label-floating">
+                                                    <label class="camposCadastro">Telefone1</label>
+                                                    <input ident="A1" name="tel1" id="tel1" type="text" maxlength="15" autocomplete="off" class="form-control cadastroinpt">
+                                                </div>
+                                            </div>
+                                            <div class="input-group">
+                                                <span class="input-group-addon" style="border: 0">
+                                                    <i class="material-icons">phone</i>
+                                                </span>
+                                                <div class="form-group label-floating">
+                                                    <label class="camposCadastro">Telefone2</label>
+                                                    <input ident="A1" name="tel2" id="tel2" type="text" maxlength="15" autocomplete="off" class="form-control cadastroinpt">
+                                                </div>
+                                            </div>
+                                            <div class="input-group">
+                                                <span class="input-group-addon" style="border: 0">
+                                                    <i class="material-icons">phone</i>
+                                                </span>
+                                                <div class="form-group label-floating">
+                                                    <label class="camposCadastro">Telefone3</label>
+                                                    <input ident="A1" name="tel3" id="tel3" type="text" maxlength="15" autocomplete="off" class="form-control cadastroinpt">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-10 col-sm-offset-1">
+                                            <div class="input-group">
+                                                <span class="input-group-addon" style="border: 0">
+                                                    <i class="material-icons">email</i>
+                                                </span>
+                                                <div class="form-group label-floating">
+                                                    <label class="camposCadastro">Email</label>
+                                                    <input ident="A1" name="email" id="email" type="email" class="form-control cadastroinpt">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="account">
+                                    <h4 class="info-text">Quase lá! Vamos cadastrar seu endereço agora! </h4>
+                                    <div class="row">
+                                        <div class="col-sm-5 col-sm-offset-1">
+                                            <div class="form-group label-floating">
+                                                <label class="camposCadastro">CEP</label>
+                                                <input type="text" ident="A0" id="cep" name="cep" autocomplete="off" onkeypress="return AllowOnlyNumbers(event);" oninput="GetCEP(this)" class="form-control cadastroinpt">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <div class="form-group label-floating">
+                                                <label class="camposCadastro">UF</label>
+                                                <select type="text" ident="A0" name="uf" id="uf" oninput="ativacampo(1)" class="form-control cadastroinpt"></select>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-8 col-sm-offset-1">
+                                            <div class="form-group label-floating">
+                                                <label class="camposCadastro">Endereço</label>
+                                                <input type="text" ident="A0" id="endereco" name="endereco" oninput="ativacampo(2)" class="form-control cadastroinpt" style="text-transform: uppercase;">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <div class="form-group label-floating">
+                                                <label class="camposCadastro">Número</label>
+                                                <input type="text" ident="A0" id="numero" name="numero" oninput="ativacampo(3)" class="form-control cadastroinpt">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-5 col-sm-offset-1">
+                                            <div class="form-group label-floating">
+                                                <label class="camposCadastro">Cidade</label>
+                                                <select type="text" ident="A0" name="cidade" id="cidade" oninput="ativacampo(4)" class="form-control cadastroinpt"></select>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-5">
+                                            <div class="form-group label-floating">
+                                                <label class="camposCadastro">Bairro</label>
+                                                <select ident="A0" name="bairro" id="bairro" class="form-control cadastroinpt">
+                                                    <option disabled="" selected=""></option>
+                                                    <option value="Vila Primavera">Vila Primavera </option>
+                                                    <option value="Albania">Albania </option>
+                                                    <option value="Algeria">Algeria </option>
+                                                    <option value="American Samoa">American Samoa </option>
+                                                    <option value="Andorra">Andorra </option>
+                                                    <option value="Angola">Angola </option>
+                                                    <option value="Anguilla">Anguilla </option>
+                                                    <option value="Antarctica">Antarctica </option>
+                                                    <option value="...">...</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-10 col-sm-offset-1">
+                                            <div class="form-group label-floating">
+                                                <label class="camposCadastro">Complemento</label>
+                                                <input type="text" ident="A0" id="complemento" class="form-control cadastroinpt">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="address">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <h4 class="info-text">Quase lá! insira o CNPJ da sua empresa </h4>
+                                        </div>
+                                        <div class="col-sm-3 col-sm-offset-1">
+                                            <div class="form-group label-floating">
+                                                <label class="camposCadastro">CNPJ</label>
+                                                <input type="text" ident="A0" id="cnpj" onkeypress="return AllowOnlyNumbers(event);" class="form-control cadastroinpt" />
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-1">
+                                            <a class="material-icons" style="font-weight:1000;background-color:#ffd100;color:black; border-radius:4px;border-color: #000000;border: 2px solid;display:none" id="aok">check</a>
+                                            <a class="material-icons" style="font-weight:1000;background-color:#000000;color:white; border-radius:4px;border-color: #000000;border: 2px solid;display:none" id="anok">close</a>
+                                            <a class="material-icons" style="font-weight:1000;background-color:#ffd100;color:black; border-radius:4px;border-color: #000000;border: 2px solid;display:none" id="aok">check</a>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <input type="button" ID="btn_cpj" class='btn btn-fill btn-success btn-wd' value="Verificar CNPJ" onclick="GetCNPJName()" />
+                                        </div>
+                                        <div class="col-sm-11 col-sm-offset-1">
+                                            <div class="form-group label-floating">
+                                                <label id="NomeEmpresa" style="color:#aaaaaa"></label>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4 col-sm-offset-1">
+                                            <input type="button" class='btn btn-fill btn-success btn-wd' value="Não Tenho CPNJ" onclick="document.getElementById('next').click();" />
+                                        </div>
+                                    </div>
+                                    </div>
+                                <div class="tab-pane" id="passwd">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <h4 class="info-text">Vamos cadastrar uma senha! </h4>
+                                        </div>
+                                        <div class="col-sm-4 col-sm-offset-4">
+                                            <div class="form-group label-floating">
+                                                <label class="camposCadastro">Senha</label>
+                                                <input type="password" id="senha1" class="form-control cadastroinpt" onchange="confirmaSenha()" oninput="confirmaSenha()" />
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4 col-sm-offset-4">
+                                            <div class="form-group label-floating">
+                                                <label class="camposCadastro">Confirme sua senha</label>
+                                                <input type="password" id="senha2" onkeypress="confirmaSenha()" oninput="confirmaSenha()" class="form-control cadastroinpt"/>
+                                            </div>
+                                            <label style="color:red;display:none" id="senhaalert">Senhas não conferem!</label>
+                                        </div>
+                                        <div class="container col-sm-offset-5">
+                                            <div class="form-group label-floating">
+                                                <div class=" box-loading" ng-view>
+                                                    <div class="display-loading open" style="float:left;display:none" id="cadastrando"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wizard-footer">
+                                <div class="pull-right">
+                                    <input type='button' class='btn btn-next btn-fill btn-success btn-wd btn-primary' name='next' id="next" value='Next' />
+                                    <input type='button' class='btn btn-finish btn-fill btn-success btn-wd' id='finish' value='Terminar' onclick="cadastrar()" disabled />
+                                </div>
+
+                                <div class="pull-left">
+                                    <input type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Previous' />
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- wizard container -->
+            </div>
+        </div>
+        <!-- end row -->
+    </div>
+    <!--  big container -->
+
+
+</div>
+<script>
+    //$(document).ready(function () {
+    //    $("#myModal").modal();
+    //});
+
+</script>
+
+<script src="~/Scripts/Cadastro/jquery.bootstrap.js"></script>
+<script src="~/Scripts/Cadastro/material-bootstrap-wizard.js"></script>
+<script src="~/Scripts/Cadastro/jquery.validate.min.js"></script>

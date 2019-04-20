@@ -1,0 +1,422 @@
+﻿
+@{
+    ViewBag.Title = "Pedido";
+}
+
+
+
+
+
+
+<link href="~/Content/Pedido/style.css" rel="stylesheet" />
+<link href="~/Content/Pedido/modals.css" rel="stylesheet" />
+<link href="~/Content/loading.css" rel="stylesheet" />
+<link href="~/Content/alertOk.css" rel="stylesheet" />
+<link href="~/Content/Clientes/style.css" rel="stylesheet" />
+<link href="~/Content/Cadastro/material-bootstrap-wizard.css" rel="stylesheet" />
+
+
+<style>
+    .arrow-left {
+        width: 0;
+        height: 0;
+        border-left: 60px solid transparent;
+        border-right: 0px solid transparent;
+        border-top: 60px solid #000000;
+    }
+
+    .arrow-left2 {
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 0px solid transparent;
+        border-top: 10px solid rgba(243,194,11,1);
+    }
+</style>
+
+<div class="container" style="margin-top:20px;" ng-controller="precosCtrl" ng-init="editar_os = '@ViewBag.OS'">
+
+    <div class="container">
+        <div class="table-wrapper">
+            <div class="table-title" style="padding: 0px 0px 0px 25px">
+                <div class="row">
+                    <div class="col-md-10">
+                        <h2 style="margin: 15px 0px 0px 50px">Carrinho de <b>Compras </b></h2>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="arrow-left" style="float: right;"></div>
+                    </div>
+                </div>
+
+            </div>
+            <br />
+            <div class="table-container table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr style="background-color: #ffd600;color: black;">
+                            <th>Malha</th>
+                            <th>Produto</th>
+                            <th><img src="http://www.rainhadascamisetas.com.br/Content/images/cores.png" /></th>
+                            <th>Tamanho</th>
+                            <th>Qtd</th>
+                            <th>Valor</th>
+                            <th>Total</th>
+                            <th colspan="2"><i class="fa fa-cog"></i></th>
+                        </tr>
+                    </thead>
+                    <tbody ng-cloak>
+                        <tr ng-repeat="x in carrinho">
+                            <td>{{x.MALHA}}</td>
+                            <td>{{x.PRODUTO}}</td>
+                            <td>{{x.COR}}</td>
+                            <td>{{x.TAMANHO}}</td>
+                            <td>{{x.QUANTIDADE}}</td>
+                            <td>{{(x.VALOR) |currency:'R$'}}</td>
+                            <td>{{(x.QUANTIDADE * x.VALOR) |currency:'R$'}}</td>
+                            <td>
+                                @*<a href="#" class="btn btn-primary" title="Edit"><i class="fa fa-pencil"></i></a>*@
+                                <div class="col-md-6">
+                                    <button type="button" class="btn btn-primary" style="background-color:#d9534f;border-color:#d43f3a;color:black" ng-click="removeItem($index)"><i class="fa fa-trash"></i></button>
+                                </div>
+                                <div class="col-md-6">
+                                    <button type="button" class="btn btn-info" style="background-color:#5bc0de;border-color:#46b8da;color:black" ng-click="currItem_(x)"><i class="fa fa-edit"></i></button>
+                                </div>
+
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">{{cliente_==null?"Cliente não Encontrado":(clientes | filter:{CPF:cliente_})[0].Nome }}</td>
+                            <td colspan="2">Total</td>
+                            <td>{{total() |currency:'R$' }}</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="row" style="background-color:black;width:100%;padding-bottom:10px" ng-cloak>
+                <div class="col-md-4">
+                    <button type="button" ng-click="limpaLista()" class="btn  btn-green " style="float:unset;margin-right:5px;margin-top:10px;width:100%;color: #ffffff;background-color: #158cba;border-color: #006e98;"> Limpar Tudo <i class="fa fa-list-alt"></i></button>
+                </div>
+                <div class="col-md-4">
+                    <button type="button" ng-click="novoItem()" class="btn  btn-green " style="float:unset;margin-right:5px;margin-top:10px;width:100%;color: #000000;background-color: #ffd100;border-color: #000000;"> Novo <i class="fa fa-plus-square"></i></button>
+                </div>
+                <div class="col-md-4" ng-show="!editar_os">
+                    <button type="button" id="btnPedido" class="btn  btn-green " style="float:unset;margin-right:5px;margin-top:10px;width:100%;color: #ffffff;background-color: #28b62c;border-color: #23a127;" onclick="$('#ModalPedido').modal()"> Fazer pedido <i class="fa fa-plus-square"></i></button>
+                </div>
+                <div class="col-md-4" ng-show="editar_os">
+                    <button type="button" id="btnEditar" class="btn  btn-green " style="float:unset;margin-right:5px;margin-top:10px;width:100%;color: #ffffff;background-color: #28b62c;border-color: #23a127;" onclick="$('#ModalPedido').modal()"> Editar Pedido <i class="fa fa-plus-square"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="row" ng-init="cliente_ = ( @ViewBag.cpf != 'ADM' ? '@ViewBag.cpf': null)">
+        <div id="user" class="col-md-12">
+            @*<div class="panel panel-primary panel-table animated slideInDown">*@
+            @*<div class="panel-heading " style="padding:5px;background-color:black">
+                    <div class="row">
+                        <div class="col col-xs-3 text-left">
+                            <a href="#list" class="btn btn-default" aria-controls="list" role="tab" data-toggle="tab" ng-click="limpaLista()"><i class="fa fa-list-alt"></i>Limpar Tudo</a>
+                        </div>
+                        <div class="col col-xs-7 text-center">
+                            <h1 class="panel-title" style="font-weight: 700;font-size:23.8px;color:#ffca00;margin-top:5px">Carrinho de compras</h1>
+                        </div>
+                        <div class="col col-xs-2 text-right ">
+                            <button type="button" class="btn  btn-success " data-toggle="modal" ng-click="novoItem()"> Novo &nbsp<i class="fa fa-plus-square"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="list">
+                            <table class="table table-striped table-bordered table-list" id="tabela" >
+                                <thead>
+                                    <tr>
+                                        <th>Malha</th>
+                                        <th>Produto</th>
+                                        <th><img src="http://www.rainhadascamisetas.com.br/Content/images/cores.png" /></th>
+                                        <th>Tamanho</th>
+                                        <th>Qtd</th>
+                                        <th>Valor</th>
+                                        <th>Total</th>
+                                        <th><em class="fa fa-cog"></em></th>
+                                    </tr>
+                                </thead>
+                                <tbody ng-cloak>
+                                    <tr ng-repeat="x in carrinho">
+                                        <td>{{x.MALHA}}</td>
+                                        <td>{{x.PRODUTO}}</td>
+                                        <td>{{x.COR}}</td>
+                                        <td>{{x.TAMANHO}}</td>
+                                        <td>{{x.QUANTIDADE}}</td>
+                                        <td>{{(x.VALOR) |currency:'R$'}}</td>
+                                        <td>{{(x.QUANTIDADE * x.VALOR) |currency:'R$'}}</td>
+                                        <td align="center">
+                                            <!--<a href="#" class="btn btn-primary" title="Edit"><i class="fa fa-pencil"></i></a>-->
+                                            <a href="#" class="btn btn-danger" title="delete" ng-click="removeItem($index)"><i class="fa fa-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4">{{cliente_==null?"Cliente não Encontrado":(clientes | filter:{CPF:cliente_})[0].Nome }}</td>
+                                        <td colspan="2">Total</td>
+                                        <td colspan="2">{{total() |currency:'R$' }}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- END id="list" -->
+                    </div><!-- END tab-content -->
+                </div>
+
+                <div class="panel-footer text-center">
+                    <ul class="pagination" style="margin:0px">
+                        <li><button type="button" id="btnPedido" class="btn  btn-green " style="float: right;margin-right:5px;margin-top:10px;width:200px" onclick="$('#ModalPedido').modal()"> Fazer pedido<i class="fa fa-plus-square"></i></button></li>
+                    </ul>
+                </div>*@
+
+            <!-- </div>--><!--END panel-table-->
+
+            <div class="col-md-12">
+                <div id="ModalError" class="modal fade">
+                    <div class="modal-dialog modal-confirm alert">
+                        <div class="modal-content">
+                            <div class="modal-header" style="background: #f3450eb0;">
+                                <div class="icon-box">
+                                    <i class="material-icons">clear</i>
+                                </div>
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            </div>
+                            <div class="modal-body text-center">
+                                <h4>Ops!</h4>
+                                <p>{{statushttp}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div id="ModalPedido" class="modal fade">
+                    <div class="modal-dialog modal-confirm alert">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <div class="icon-box">
+                                    <i class="material-icons" ng-show="!validando">&#xE8CC</i>
+                                    <div class="loader" ng-show="validando"></div>
+                                </div>
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            </div>
+                            <div class="modal-body text-center" ng-show="!editar_os">
+                                <h4 ng-show="validando">Aguarde estamos Validando seu pedido!</h4>
+                                <h4 ng-show="!validando">Deseja Realizar esse pedido?</h4>
+                                <button type="button" ng-show="!validando" class="btn btn-info" ng-click="fazerPedido()">Sim</button>
+                                <button type="button" ng-show="!validando" class="btn btn-danger" data-dismiss="modal">Não</button>
+                            </div>
+                            <div class="modal-body text-center" ng-show="editar_os">
+                                <h4 ng-show="validando">Aguarde estamos Editando seu pedido!</h4>
+                                <h4 ng-show="!validando">Deseja Editar esse pedido?</h4>
+                                <button type="button" ng-show="!validando" class="btn btn-info" ng-click="fazerPedido()">Sim</button>
+                                <button type="button" ng-show="!validando" class="btn btn-danger" data-dismiss="modal">Não</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="ModalNota" role="dialog">
+                <div class="modal-dialog modal-lg">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Sua Nota!</h4>
+                        </div>
+                        <div class="modal-body">
+                            <img ng-src="nota/{{statushttp}}" style="width:100%" />
+                            <hr />
+                            <div class="alert alert-danger" style="margin-bottom: 0px">
+                                <strong><i class="fa fa-ban" style="font-size:30px"></i>&nbsp Atenção! Ao salvar a imagem insira ".jpg" sem aspas ao final do nome da imagem XXXXXXXX.jpg</strong>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Escolha seu produto!</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row"  ng-show="'@ViewBag.adm' == 'ADM' || '@ViewBag.adm' == 'FUNC'">
+                                <div class="col-md-6">
+                                    <label>Cliente:</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <select class="form-control " ng-model="cliente_" ng-change="atualizaCliente()">
+                                        <option value="">Selecione o Cliente</option>
+                                        <option ng-repeat="x in clientes " ng-value="x.CPF">{{x.Nome}}</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6"  ng-show="'@ViewBag.adm' == 'ADM' || '@ViewBag.adm' == 'FUNC'">
+                                    <label><input type="checkbox" <!--ng-init="check_codBarras--> = true" ng-model="check_codBarras" value="">&nbsp Código de barras</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" onkeydown="javascript: return event.keyCode == 69 ? false : true" class="form-control" id="malha" ng-model="codBarr" ng-show="check_codBarras" ng-keyup="keyupevent(event=$event,'codBarras')" focus-me="focusBarCode" placeholder="Insira o código de barras">
+                                </div>
+                            </div>
+                            <hr style="margin-top:5px" />
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Malha:</label>
+                                            <select class="form-control" ng-model="malha" focus-me="focusMalha">
+                                                <option value="">Selecione a Malha</option>
+                                                <option ng-repeat="x in lista | unique:'MALHA'" ng-value="x.MALHA">{{x.MALHA}}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Categoria do Produto:</label>
+                                            <select class="form-control" ng-model="catProd" ng-disabled="!malha">
+                                                <option value="">Selecione a categoria</option>
+                                                <option ng-repeat="x in lista | filter:{MALHA:malha} | unique:'CATEGORIA_PROD'" ng-value="x.CATEGORIA_PROD">{{x.CATEGORIA_PROD}}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr />
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Produto:</label>
+                                            <select class="form-control" ng-model="produto" ng-disabled="!catProd">
+                                                <option value="">Selecione o produto</option>
+                                                <option ng-repeat="x in lista | filter:{CATEGORIA_PROD:catProd} | filter:{MALHA:malha} | unique:'ITEM'" ng-value="x.ITEM">{{x.ITEM}}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Tamanho:</label>
+                                            <select class="form-control" ng-model="Tam" ng-disabled="!produto">
+                                                <option value="">Selecione o Tamanho</option>
+                                                <option ng-repeat="x in lista | filter:{CATEGORIA_PROD:catProd} | filter:{MALHA:malha} | filter:{ITEM:produto} | unique:'TAMANHO'" ng-value="x.TAMANHO">{{x.TAMANHO}}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label> <img src="http://www.rainhadascamisetas.com.br/Content/images/cores.png" /></label>
+                                            <select class="form-control" ng-model="cor" focus-me="focusCor">
+                                                <option value="">Selecione a Cor</option>
+                                                <option ng-repeat="x in cores | orderBy :'COR'" ng-value="x.COR">{{x.COR}}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Quantidade:</label>
+                                            <input type="number" class="form-control" focus-me="focusQtd" ng-init="Quantidade=1" ng-model="Quantidade" onkeydown="javascript: return event.keyCode == 69 ? false : true" ng-model="qtd" focus-me="focusQtd" ng-keyup="keyupevent(event=$event,'qtd')" placeholder="Insira a quantidade">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <input type="checkbox" ng-model="check_manter_dados" value="">&nbsp Manter Dados</label>
+                                    </div>
+                                </div>
+
+                                <hr />
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label style="font-size:30px;font-weight:bold">Valor:</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label style="text-align:left;font-size:30px;font-weight:bold">{{(Quantidade>0 && produto && Tam && cor ?(lista | filter:{CATEGORIA_PROD:catProd} | filter:{MALHA:malha} | filter:{ITEM:produto}:true | filter:{TAMANHO:Tam}:true)[0][(cor=='BRANCO'?'BRANCO':'COLORIDO')]:0) | currency:'R$' }}</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label style="text-align:left;font-size:30px;font-weight:bold">Quantidade:</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label style="text-align:left;font-size:30px;font-weight:bold">{{Quantidade}}</label>
+                                    </div>
+                                </div>
+                                <div class="row" style="text-align:left;font-size:30px;font-weight:bold">
+                                    <div class="col-md-6">
+                                        <label style="text-align:left;font-size:30px;font-weight:bold">Total:</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label ng-model="Valor" style="text-align:left;font-size:30px;font-weight:bold">
+                                            {{
+                                            (Quantidade>0 && produto && Tam && cor ?(lista | filter:{CATEGORIA_PROD:catProd} | filter:{MALHA:malha} | filter:{ITEM:produto}:true | filter:{TAMANHO:Tam}:true)[0][(cor=='BRANCO'?'BRANCO':'COLORIDO')]:0) * Quantidade | currency:'R$' }}
+                                        </label>
+
+                                    </div>
+                                </div>
+
+                            </form>
+
+                        </div>
+
+                        <div class="modal-footer">
+                            <div class="col-md-8">
+                                <div ng-init="error=''" ng-show="error != ''" style="text-align:left">
+                                    <div class="alert alert-danger" style="margin-bottom: 0px">
+                                        <strong><i class="fa fa-ban" style="font-size:30px"></i>&nbsp Ops!</strong>{{error}}
+                                    </div>
+                                </div>
+                                <div ng-init="success=''" ng-show="success != ''" style="text-align:left">
+                                    <div class="alert alert-success" style="margin-bottom: 0px">
+                                        <strong><i class="fa fa-check" style="font-size:30px"></i>&nbsp Ótimo!</strong>{{success}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2" style="">
+                                <a href="#" class="btn btn-info" style="background-color:#d9534f;border-color:#d43f3a;float:left" title="cancelar" data-dismiss="modal" ng-show="alterarFlag > -1">Cancelar</a>
+                            </div>
+                            <div class="col-md-2" style="">
+                                <button type="button" class="btn btn-default" ng-click="qtdEnter()" ng-show="alterarFlag < 0">Adcionar</button>
+                                <a href="#" class="btn btn-info" style="background-color:#5bc0de;border-color:#46b8da;float:left" title="salvar" ng-click="editar()" ng-show="alterarFlag > -1">Salvar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!--</div>-->
+        </div>
+    </div>
+    <script src="~/Scripts/Pedido/angular.js?version=3"></script>
+    <script>
+        $(document).ready(function () {
+            $("#ModalEdit").modal();
+        });
+
+    </script>
+
+

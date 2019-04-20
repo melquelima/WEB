@@ -1,0 +1,120 @@
+﻿
+@{
+    ViewBag.Title = "Precos";
+}
+
+<script src="~/Scripts/Precos/Precos.js"></script>
+<link href="~/Content/loading.css" rel="stylesheet" />
+<link href="~/Content/alertOk.css" rel="stylesheet" />
+<script src="~/Scripts/index/JavaScript.js"></script>
+<link href="~/Content/Clientes/style.css" rel="stylesheet" />
+<link href="~/Content/Cadastro/material-bootstrap-wizard.css" rel="stylesheet" />
+
+<style>
+    .arrow-left {
+        width: 0;
+        height: 0;
+        border-left: 60px solid transparent;
+        border-right: 0px solid transparent;
+        border-top: 60px solid #000000;
+    }
+    .arrow-left2 {
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 0px solid transparent;
+        border-top: 10px solid rgba(243,194,11,1);
+    }
+</style>
+
+<div ng-controller="precosCtrl">
+
+
+    <div class="row" style="margin-right: auto;">
+        <div class="w3agile_footer_grid" style="text-align: center">
+            <h3 class="w3ls-title2" style="padding: 5px; background-color: #000000; color: rgba(243,194,11,1); position: relative;margin-top: 0px"><b>Tabela de Preços</b></h3>
+        </div>
+    </div>
+    <!---------------------------------------------LOADING---------------------------------->
+    <div class="container box-loading" ng-show="!mostra">
+        <div class="display-loading open"></div>
+        <div>Aguarde...</div>
+    </div>
+    <!----------------------------------------------CONTEUDO--------------------------------->
+    <div class="container">
+        <div class="table-wrapper">
+            <div class="table-title" style="padding: 0px 0px 0px 25px">
+                <div class="row">
+                    <div class="col-md-10">
+                        <h2 style="margin: 15px 0px 0px 50px">Tabela de <b>Preços</b></h2>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="arrow-left" style="float: right;"></div>
+                    </div>
+                </div>
+               
+                    
+                </div>
+            <div class="table-filter">
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <button type="button" class="btn btn-primary"><i class="fa fa-search"></i></button>
+                        <div class="filter-group">
+                            <label>Produtos</label>
+                            <input type="text" class="form-control" ng-model="filtroProduto" name="prod" required="" placeholder="Todos" ng-change="">
+                        </div>
+                        <div class="filter-group">
+                            <label>Categoria_Tam</label>
+                            <select class="form-control" ng-model="filtroCatTam" ng-options="x.CATEGORIA_TAM for x in itens | filter:filtroProduto | filter:{MALHA:filtroMalha.MALHA}  | filter:{CATEGORIA_PROD:filtroCatProd.CATEGORIA_PROD}| unique:'CATEGORIA_TAM'">
+                                <option value="">Todos</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>Categoria_Produto</label>
+                            <select class="form-control" ng-model="filtroCatProd" ng-options="x.CATEGORIA_PROD for x in itens | filter:{MALHA:filtroMalha.MALHA} | unique:'CATEGORIA_PROD'">
+                                <option value="">Todas</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>Malha</label>
+                            <select class="form-control" ng-model="filtroMalha" ng-options="x.MALHA for x in itens | unique:'MALHA'">
+                                <option value="">Todas</option>
+                            </select>
+                        </div>
+                        <span class="filter-icon"><i class="fa fa-filter"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-container table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr style="background-color: #ffd600;color: black;">
+                            <th style="text-align: center">Malha</th>
+                            <th style="text-align: center">Produto</th>
+                            <th style="text-align: center">Tam.</th>
+                            <th style="text-align: center">
+                                <img src="/Content/images/cores.png" />
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody ng-cloak>
+                        <tr ng-repeat="iten in itens | filter:filtroProduto | filter:{MALHA:filtroMalha.MALHA} | filter:{CATEGORIA_PROD:filtroCatProd.CATEGORIA_PROD} | filter:{CATEGORIA_TAM:filtroCatTam.CATEGORIA_TAM}">
+                            <td>{{iten.MALHA }}</td>
+                            <td>{{iten.ITEM}}</td>
+                            <td>{{iten.TAMANHO}}</td>
+                            <td>{{(iten.BRANCO | currency:'R$') + "|" + (iten.COLORIDO | currency:'R$')}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="clearfix">
+                <pagination total-items="totalItems" ng-model="currentPage" max-size="200" boundary-links="false"
+                            items-per-page="numPerPage" class="pagination">
+                </pagination>
+            </div>
+        </div>
+    </div>
+
+   

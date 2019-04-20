@@ -1,0 +1,7 @@
+F:\Web\Site\Rainhadascamisetas3\DeathByCaptcha\bin\Debug\DeathByCaptcha.dll
+F:\Web\Site\Rainhadascamisetas3\DeathByCaptcha\bin\Debug\DeathByCaptcha.pdb
+F:\Web\Site\Rainhadascamisetas3\DeathByCaptcha\obj\Debug\PIST.DeathByCaptcha.csprojAssemblyReference.cache
+F:\Web\Site\Rainhadascamisetas3\DeathByCaptcha\obj\Debug\PIST.DeathByCaptcha.csproj.CoreCompileInputs.cache
+F:\Web\Site\Rainhadascamisetas3\DeathByCaptcha\obj\Debug\PIST.DeathByCaptcha.csproj.CopyComplete
+F:\Web\Site\Rainhadascamisetas3\DeathByCaptcha\obj\Debug\DeathByCaptcha.dll
+F:\Web\Site\Rainhadascamisetas3\DeathByCaptcha\obj\Debug\DeathByCaptcha.pdb

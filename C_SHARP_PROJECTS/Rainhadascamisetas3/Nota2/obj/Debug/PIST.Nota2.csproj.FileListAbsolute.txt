@@ -1,0 +1,8 @@
+G:\Web\Site\Rainhadascamisetas3\Nota2\bin\Debug\Nota2.dll
+G:\Web\Site\Rainhadascamisetas3\Nota2\bin\Debug\Nota2.pdb
+G:\Web\Site\Rainhadascamisetas3\Nota2\bin\Debug\itextsharp.dll
+G:\Web\Site\Rainhadascamisetas3\Nota2\bin\Debug\itextsharp.xml
+G:\Web\Site\Rainhadascamisetas3\Nota2\obj\Debug\PIST.Nota2.csprojResolveAssemblyReference.cache
+G:\Web\Site\Rainhadascamisetas3\Nota2\obj\Debug\PIST.Nota2.csproj.CoreCompileInputs.cache
+G:\Web\Site\Rainhadascamisetas3\Nota2\obj\Debug\Nota2.dll
+G:\Web\Site\Rainhadascamisetas3\Nota2\obj\Debug\Nota2.pdb

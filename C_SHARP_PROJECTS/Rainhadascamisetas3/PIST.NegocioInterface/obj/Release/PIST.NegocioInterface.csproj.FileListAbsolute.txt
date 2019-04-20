@@ -1,0 +1,17 @@
+G:\Web\Site\Rainhadascamisetas3\PIST.NegocioInterface\bin\Release\PIST.NegocioInterface.dll
+G:\Web\Site\Rainhadascamisetas3\PIST.NegocioInterface\bin\Release\PIST.NegocioInterface.pdb
+G:\Web\Site\Rainhadascamisetas3\PIST.NegocioInterface\bin\Release\PIST.Entidade.dll
+G:\Web\Site\Rainhadascamisetas3\PIST.NegocioInterface\bin\Release\PIST.Entidade.pdb
+G:\Web\Site\Rainhadascamisetas3\PIST.NegocioInterface\obj\Release\PIST.NegocioInterface.csprojResolveAssemblyReference.cache
+G:\Web\Site\Rainhadascamisetas3\PIST.NegocioInterface\obj\Release\PIST.NegocioInterface.csproj.CoreCompileInputs.cache
+G:\Web\Site\Rainhadascamisetas3\PIST.NegocioInterface\obj\Release\PIST.NegocioInterface.dll
+G:\Web\Site\Rainhadascamisetas3\PIST.NegocioInterface\obj\Release\PIST.NegocioInterface.pdb
+F:\Web\Site\Rainhadascamisetas3\PIST.NegocioInterface\bin\Release\PIST.NegocioInterface.dll
+F:\Web\Site\Rainhadascamisetas3\PIST.NegocioInterface\bin\Release\PIST.NegocioInterface.pdb
+F:\Web\Site\Rainhadascamisetas3\PIST.NegocioInterface\bin\Release\PIST.Entidade.dll
+F:\Web\Site\Rainhadascamisetas3\PIST.NegocioInterface\bin\Release\PIST.Entidade.pdb
+F:\Web\Site\Rainhadascamisetas3\PIST.NegocioInterface\obj\Release\PIST.NegocioInterface.csprojAssemblyReference.cache
+F:\Web\Site\Rainhadascamisetas3\PIST.NegocioInterface\obj\Release\PIST.NegocioInterface.csproj.CoreCompileInputs.cache
+F:\Web\Site\Rainhadascamisetas3\PIST.NegocioInterface\obj\Release\PIST.NegocioInterface.csproj.CopyComplete
+F:\Web\Site\Rainhadascamisetas3\PIST.NegocioInterface\obj\Release\PIST.NegocioInterface.dll
+F:\Web\Site\Rainhadascamisetas3\PIST.NegocioInterface\obj\Release\PIST.NegocioInterface.pdb

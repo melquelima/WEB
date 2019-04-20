@@ -1,0 +1,271 @@
+/*!
+
+ =========================================================
+ * Material Bootstrap Wizard - v1.0.2
+ =========================================================
+ 
+ * Product Page: https://www.creative-tim.com/product/material-bootstrap-wizard
+ * Copyright 2017 Creative Tim (http://www.creative-tim.com)
+ * Licensed under MIT (https://github.com/creativetimofficial/material-bootstrap-wizard/blob/master/LICENSE.md)
+ 
+ =========================================================
+ 
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
+ 
+ 
+body {
+  background-color: #E5E5E5;
+  color: #333;
+}
+body.inverse {
+  background: #333333;
+}
+body.inverse, body.inverse .form-control {
+  color: #ffffff;
+}
+body.inverse .modal,
+body.inverse .modal .form-control,
+body.inverse .panel-default,
+body.inverse .panel-default .form-control,
+body.inverse .card,
+body.inverse .card .form-control {
+  background-color: initial;
+  color: initial;
+}
+
+.wizard-container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    z-index: 3;
+}
+.wizard-container .wizard-navigation {
+  position: relative;
+}
+
+.card {
+  background-color: #FFFFFF;
+  padding: 10px 0;
+  width: 100%;
+  border-radius: 6px;
+  color: rgba(0,0,0, 0.87);
+  background: #fff;
+  margin-bottom: 10px;
+}
+
+.wizard-card {
+  min-height: 410px;
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+.wizard-card .picture-container {
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+}
+.wizard-card .picture {
+  width: 106px;
+  height: 106px;
+  background-color: #999999;
+  border: 4px solid #CCCCCC;
+  color: #FFFFFF;
+  border-radius: 50%;
+  margin: 5px auto;
+  overflow: hidden;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+}
+
+
+.wizard-card .picture:hover {
+  border-color: #2ca8ff;
+}
+.wizard-card .moving-tab {
+  position: absolute;
+  text-align: center;
+  padding: 12px;
+  font-size: 12px;
+  text-transform: uppercase;
+  -webkit-font-smoothing: subpixel-antialiased;
+  top: -4px;
+  left: 0px;
+  border-radius: 4px;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.wizard-card[data-color="green"] .moving-tab {
+  background-color: #ffd100;
+  box-shadow: 0 16px 26px -10px rgba(204, 184, 43, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(76, 175, 80, 0.2);
+}
+
+
+
+.wizard-card .picture input[type="file"] {
+  cursor: pointer;
+  display: block;
+  height: 100%;
+  left: 0;
+  opacity: 0 !important;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.wizard-card .picture-src {
+  width: 100%;
+}
+.wizard-card .tab-content {
+  min-height: 340px;
+  padding: 20px 15px;
+}
+.wizard-card .wizard-footer {
+  padding: 0 15px;
+}
+.wizard-card .wizard-footer .checkbox {
+  margin-top: 16px;
+}
+.wizard-card .disabled {
+  display: none;
+}
+.wizard-card .wizard-header {
+  text-align: center;
+  padding: 25px 0 35px;
+}
+.wizard-card .wizard-header h5 {
+  margin: 5px 0 0;
+}
+.wizard-card .nav-pills > li {
+  text-align: center;
+}
+.wizard-card .btn {
+  text-transform: uppercase;
+}
+.wizard-card .info-text {
+  text-align: center;
+  font-weight: 300;
+  margin: 10px 0 30px;
+}
+
+
+
+.form-control,
+.form-group .form-control {
+  /*border: 0;*/
+  
+  /*background-image: linear-gradient(#ffd100, #ffd100), linear-gradient(#D2D2D2, #D2D2D2);*/
+  background-size: 0 2px, 100% 1px;
+  background-repeat: no-repeat;
+  background-position: center bottom, center calc(100% - 1px);
+  background-color: transparent;
+  transition: background 0s ease-out;
+  float: none;
+  box-shadow: none;
+  border-radius: 0;
+  font-weight: 400;
+}
+
+.cadastroinpt
+{
+    background-image: linear-gradient(#ffd100, #ffd100), linear-gradient(#D2D2D2, #D2D2D2);
+    border:0;
+}
+
+.form-group.label-static label.control-label, .form-group.label-placeholder label.control-label, .form-group.label-floating label.control-label {
+  position: absolute;
+  pointer-events: none;
+  transition: 0.3s ease all;
+}
+
+
+
+
+
+
+.form-group.is-focused .form-control {
+  outline: none;
+  background-image: #000000;
+  background-size: 100% 2px, 100% 1px;
+  box-shadow: none;
+  transition-duration: 0.3s;
+}
+
+.checkbox label,
+.radio label,
+label {
+  font-size: 14px;
+  line-height: 1.42857;
+  color: #AAAAAA;
+  font-weight: 400;
+}
+
+
+
+
+
+
+.form-group.label-floating label.control-label, .form-group.label-placeholder label.control-label {
+  top: -7px;
+  font-size: 14px;
+  line-height: 1.42857;
+}
+
+
+.input-group .input-group-addon {
+  /*border: 0;*/
+  background: transparent;
+  padding: 6px 15px 0px;
+}
+
+/*            Navigation menu                */
+.nav-pills {
+  background-color: rgba(200, 200, 200, 0.2);
+}
+.nav-pills > li + li {
+  margin-left: 0;
+}
+.nav-pills > li > a {
+  border: 0 !important;
+  border-radius: 0;
+  line-height: 18px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+  min-width: 100px;
+  text-align: center;
+  color: #555555 !important;
+}
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus,
+.nav-pills > li > a:hover,
+.nav-pills > li > a:focus {
+  background-color: inherit;
+}
+.nav-pills > li i {
+  display: block;
+  font-size: 30px;
+  padding: 15px 0;
+}
+
+.btn-success {
+    color: #000000;
+    background-color: #ffd100;
+    border-color: #000000;
+}
+
+.btn-success:hover {
+    color: #ffd100;
+    background-color: #000000;
+    border-color: #ffd100;
+}
+.btn-success:active:hover{
+   color: #ffd100;
+    background-color: #000000;
+    border-color: #ffd100;
+}
+.form-group.label-static label.control-label, .form-group.label-floating.is-focused label.control-label, .form-group.label-floating:not(.is-empty) label.control-label {
+  top: -28px;
+  left: 0;
+  font-size: 11px;
+  line-height: 1.07143;
+}

@@ -1,0 +1,12 @@
+G:\Web\Site\Rainhadascamisetas3\PIST.Entidade\bin\Release\PIST.Entidade.dll
+G:\Web\Site\Rainhadascamisetas3\PIST.Entidade\bin\Release\PIST.Entidade.pdb
+G:\Web\Site\Rainhadascamisetas3\PIST.Entidade\obj\Release\PIST.Entidade.csproj.CoreCompileInputs.cache
+G:\Web\Site\Rainhadascamisetas3\PIST.Entidade\obj\Release\PIST.Entidade.dll
+G:\Web\Site\Rainhadascamisetas3\PIST.Entidade\obj\Release\PIST.Entidade.pdb
+G:\Web\Site\Rainhadascamisetas3\PIST.Entidade\obj\Release\PIST.Entidade.csprojResolveAssemblyReference.cache
+F:\Web\Site\Rainhadascamisetas3\PIST.Entidade\bin\Release\PIST.Entidade.dll
+F:\Web\Site\Rainhadascamisetas3\PIST.Entidade\bin\Release\PIST.Entidade.pdb
+F:\Web\Site\Rainhadascamisetas3\PIST.Entidade\obj\Release\PIST.Entidade.csprojAssemblyReference.cache
+F:\Web\Site\Rainhadascamisetas3\PIST.Entidade\obj\Release\PIST.Entidade.csproj.CoreCompileInputs.cache
+F:\Web\Site\Rainhadascamisetas3\PIST.Entidade\obj\Release\PIST.Entidade.dll
+F:\Web\Site\Rainhadascamisetas3\PIST.Entidade\obj\Release\PIST.Entidade.pdb

@@ -1,0 +1,113 @@
+﻿
+@{
+    ViewBag.Title = "teste";
+}
+
+
+
+    <form>
+        <div>
+            <label for="fileUpload" />
+            Select File to Upload: <input id="fileUpload" type="file" />
+
+            <input id="btnUploadFile" type="button" value="Upload File" />
+        </div>
+    </form>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $('#btnUploadFile').on('click', function () {
+
+            var data = new FormData();
+
+            var files = $("#fileUpload").get(0).files;
+
+            // Add the uploaded image content to the form data collection
+            if (files.length > 0) {
+                data.append("UploadedImage", files[0]);
+                data.append("teste", "abc");
+            }
+           // console.log(data);
+            httpGet2(data);
+            // Make Ajax request with the contentType = false, and procesDate = false
+            /*$.ajax({
+                type: "POST",
+                url: "/api/tcc/UploadFile",
+                contentType: false,
+                processData: false,
+                data: data,
+                success: function (e) {
+                    console.log(e);
+                }
+            });*/
+        });
+    });
+
+
+    function httpGet(obj) {
+
+        x = new XMLHttpRequest();
+        x.open("POST", "/api/tcc/UploadFile", true);
+
+
+        x.onreadystatechange = function () {
+            //Your code here to handle readyState==4 and readyState==3
+            console.log(x.readyState + ' - ' + x.status);
+            if (x.readyState == 4 && x.status == 200) {
+                console.log("====OK====");
+                console.log(x.responseText);
+            }
+            else if (x.readyState == 4 && !(x.status == 200)) {
+                console.log("====NOK====");
+                console.log(x.statusText);
+            }
+        }
+        x.send(obj);
+    }
+
+    function httpGet2(obj) {
+
+        var oReq = new XMLHttpRequest();
+
+        oReq.addEventListener("progress", updateProgress, false);
+        oReq.addEventListener("load", transferComplete, false);
+        oReq.addEventListener("error", transferFailed, false);
+        oReq.addEventListener("abort", transferCanceled, false);
+
+        oReq.open("POST", "/api/tcc/UploadFile", true);
+        oReq.send(obj);
+
+        // ...A transferência foi cancelada pelo usuário
+
+        // progresso de transferências do servidor para o cliente (downloads)
+        function updateProgress(oEvent) {
+            if (oEvent.lengthComputable) {
+                var percentComplete = oEvent.loaded / oEvent.total;
+                console.log(percentComplete);
+            } else {
+                // Não é possível calcular informações de progresso uma vez que a dimensão total é desconhecida
+            }
+        }
+
+        function transferComplete(evt) {
+            if (evt.currentTarget.status == 200 && evt.currentTarget.responseText =="\"OK\"") {
+                console.log("A transferência foi concluída.");
+                console.log(evt.currentTarget);
+            } else {
+                console.log("ERROR==========");
+                console.log(evt.currentTarget.responseText);
+                console.log(evt.currentTarget);
+            }
+        }
+
+        function transferFailed(evt) {
+            alert("Um erro ocorreu durante a transferência do arquivo.");
+        }
+
+        function transferCanceled(evt) {
+            alert("A transferência foi cancelada pelo usuário.");
+        }
+    }
+
+</script>

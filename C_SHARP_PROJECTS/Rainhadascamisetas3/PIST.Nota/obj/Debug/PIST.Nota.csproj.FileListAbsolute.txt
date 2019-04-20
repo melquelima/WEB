@@ -1,0 +1,9 @@
+G:\Web\Site\Rainhadascamisetas3\PIST.Nota\bin\Debug\PIST.Nota.exe.config
+G:\Web\Site\Rainhadascamisetas3\PIST.Nota\bin\Debug\PIST.Nota.exe
+G:\Web\Site\Rainhadascamisetas3\PIST.Nota\bin\Debug\PIST.Nota.pdb
+G:\Web\Site\Rainhadascamisetas3\PIST.Nota\bin\Debug\itextsharp.dll
+G:\Web\Site\Rainhadascamisetas3\PIST.Nota\bin\Debug\itextsharp.xml
+G:\Web\Site\Rainhadascamisetas3\PIST.Nota\obj\Debug\PIST.Nota.csprojResolveAssemblyReference.cache
+G:\Web\Site\Rainhadascamisetas3\PIST.Nota\obj\Debug\PIST.Nota.csproj.CoreCompileInputs.cache
+G:\Web\Site\Rainhadascamisetas3\PIST.Nota\obj\Debug\PIST.Nota.exe
+G:\Web\Site\Rainhadascamisetas3\PIST.Nota\obj\Debug\PIST.Nota.pdb

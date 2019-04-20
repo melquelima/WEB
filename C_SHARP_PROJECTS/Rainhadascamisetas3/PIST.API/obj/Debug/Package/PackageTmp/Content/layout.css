@@ -1,0 +1,20 @@
+﻿.navbar .navbar-right .dropdown-menu {
+}
+
+.dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover {
+    background-color: #000000;
+}
+
+.dropdown-item {
+    color: black !important;
+}
+
+.some, .func {
+    display: none !important;
+}
+
+@media (max-width: 768px) {
+    .dropdown-item {
+        color: white !important;
+    }
+}

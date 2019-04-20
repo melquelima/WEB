@@ -1,0 +1,50 @@
+﻿.display-loading.open {
+    border: 6px solid #ffd400;
+    border-top: 6px solid #000;
+    border-radius: 50%;
+    border-top: 6px solid #000;
+    width: 30px;
+    height: 30px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+    margin: 0 auto;
+    position: relative;
+    /*top: 47%;*/
+}
+
+.box-loading {
+    position: relative;
+    width: 10px;
+    height: 10px;
+}
+
+    .box-loading > div {
+        position: absolute;
+        top: 0;
+        text-align: center;
+        width: 100%;
+        margin-top: 8px;
+        margin-left: 8px;
+        font-size: 10px;
+        font-weight: bold;
+    }
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

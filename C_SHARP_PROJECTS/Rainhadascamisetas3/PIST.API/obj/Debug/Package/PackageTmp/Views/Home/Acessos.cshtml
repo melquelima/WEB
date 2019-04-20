@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewBag.Title = "Acessos";
+}
+
+
+
+<link href="~/Content/Clientes/style.css" rel="stylesheet" />
+<script src="http://code.angularjs.org/1.2.16/angular-resource.js"></script>
+
+<script src="~/Scripts/Clientes/bootstrap-11.js"></script>
+<link href="~/Content/Cadastro/material-bootstrap-wizard.css" rel="stylesheet" />
+<link href="~/Content/alertOk.css" rel="stylesheet" />
+<script src="~/Scripts/Visitantes/angular.js"></script>
+
+
+<div ng-controller="mainCtrl">
+
+    <div class="container">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <h2>Meus <b>Visitantes</b></h2>
+                    </div>
+                    <div class="col-sm-8">
+                        <a href="#" class="btn btn-primary"><i class="material-icons">&#xE863;</i> <span>Atualizar Lista</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="table-filter">
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <button type="button" class="btn btn-primary"><i class="fa fa-search"></i></button>
+                        <div class="filter-group">
+                            <label>Filtrar</label>
+                            <input type="text" class="form-control" ng-model="filtro" ng-change="">
+                        </div>
+                        <span class="filter-icon"><i class="fa fa-filter"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="table-container table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr style="background-color: #ffd600;color: black;">
+                            <th style="width:100px">Data</th>
+                            <th>Quantidade</th>
+                        </tr>
+                    </thead>
+                    <tbody ng-cloak>
+                        <tr ng-repeat="obj in Visitantes |filter:filtro">
+                            <td>{{obj.DATA.split('T')[0]}}</td>
+                            <td>{{obj.QTD}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="clearfix">
+                <pagination total-items="totalItems" ng-model="currentPage" max-size="200" boundary-links="false"
+                            items-per-page="numPerPage" class="pagination">
+                </pagination>
+            </div>
+        </div>
+    </div>

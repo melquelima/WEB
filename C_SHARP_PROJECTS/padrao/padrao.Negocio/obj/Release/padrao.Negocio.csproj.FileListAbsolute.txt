@@ -16,3 +16,21 @@ C:\Users\melqu\Google Drive\WEB\Visual Studio\padrao\padrao.Negocio\obj\Release\
 C:\Users\melqu\Google Drive\WEB\Visual Studio\padrao\padrao.Negocio\obj\Release\padrao.Negocio.csproj.CopyComplete
 C:\Users\melqu\Google Drive\WEB\Visual Studio\padrao\padrao.Negocio\obj\Release\padrao.Negocio.dll
 C:\Users\melqu\Google Drive\WEB\Visual Studio\padrao\padrao.Negocio\obj\Release\padrao.Negocio.pdb
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Negocio\bin\Release\padrao.Negocio.dll.config
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Negocio\bin\Release\padrao.Negocio.dll
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Negocio\bin\Release\padrao.Negocio.pdb
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Negocio\bin\Release\EntityFramework.dll
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Negocio\bin\Release\EntityFramework.SqlServer.dll
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Negocio\bin\Release\padrao.Entidade.dll
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Negocio\bin\Release\padrao.Interface.dll
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Negocio\bin\Release\padrao.Entidade.pdb
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Negocio\bin\Release\padrao.Entidade.dll.config
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Negocio\bin\Release\padrao.Interface.pdb
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Negocio\bin\Release\padrao.Interface.dll.config
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Negocio\bin\Release\EntityFramework.xml
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Negocio\bin\Release\EntityFramework.SqlServer.xml
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Negocio\obj\Release\padrao.Negocio.csprojAssemblyReference.cache
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Negocio\obj\Release\padrao.Negocio.csproj.CoreCompileInputs.cache
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Negocio\obj\Release\padrao.Negocio.csproj.CopyComplete
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Negocio\obj\Release\padrao.Negocio.dll
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Negocio\obj\Release\padrao.Negocio.pdb

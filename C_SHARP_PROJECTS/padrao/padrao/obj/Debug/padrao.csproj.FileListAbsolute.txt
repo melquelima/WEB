@@ -278,3 +278,4 @@ F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao\obj\Debug\padrao.csproj.CoreCompileInp
 F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao\obj\Debug\padrao.csproj.CopyComplete
 F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao\obj\Debug\padrao.dll
 F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao\obj\Debug\padrao.pdb
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao\bin\DeathByCaptcha.dll

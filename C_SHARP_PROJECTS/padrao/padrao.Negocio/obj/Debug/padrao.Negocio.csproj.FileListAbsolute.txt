@@ -16,3 +16,21 @@ C:\Users\melqu\Google Drive\WEB\Visual Studio\padrao\padrao.Negocio\bin\Debug\En
 C:\Users\melqu\Google Drive\WEB\Visual Studio\padrao\padrao.Negocio\obj\Debug\padrao.Negocio.csproj.CopyComplete
 C:\Users\melqu\Google Drive\WEB\Visual Studio\padrao\padrao.Negocio\obj\Debug\padrao.Negocio.dll
 C:\Users\melqu\Google Drive\WEB\Visual Studio\padrao\padrao.Negocio\obj\Debug\padrao.Negocio.pdb
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Negocio\bin\Debug\padrao.Negocio.dll.config
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Negocio\bin\Debug\padrao.Negocio.dll
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Negocio\bin\Debug\padrao.Negocio.pdb
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Negocio\bin\Debug\EntityFramework.dll
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Negocio\bin\Debug\EntityFramework.SqlServer.dll
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Negocio\bin\Debug\padrao.Entidade.dll
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Negocio\bin\Debug\padrao.Interface.dll
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Negocio\bin\Debug\padrao.Entidade.pdb
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Negocio\bin\Debug\padrao.Entidade.dll.config
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Negocio\bin\Debug\padrao.Interface.pdb
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Negocio\bin\Debug\padrao.Interface.dll.config
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Negocio\bin\Debug\EntityFramework.xml
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Negocio\bin\Debug\EntityFramework.SqlServer.xml
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Negocio\obj\Debug\padrao.Negocio.csprojAssemblyReference.cache
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Negocio\obj\Debug\padrao.Negocio.csproj.CoreCompileInputs.cache
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Negocio\obj\Debug\padrao.Negocio.csproj.CopyComplete
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Negocio\obj\Debug\padrao.Negocio.dll
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Negocio\obj\Debug\padrao.Negocio.pdb

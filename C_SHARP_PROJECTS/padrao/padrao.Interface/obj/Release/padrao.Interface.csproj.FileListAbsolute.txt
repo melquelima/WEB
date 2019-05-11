@@ -13,3 +13,18 @@ C:\Users\melqu\Google Drive\WEB\Visual Studio\padrao\padrao.Interface\obj\Releas
 C:\Users\melqu\Google Drive\WEB\Visual Studio\padrao\padrao.Interface\obj\Release\padrao.Interface.csproj.CopyComplete
 C:\Users\melqu\Google Drive\WEB\Visual Studio\padrao\padrao.Interface\obj\Release\padrao.Interface.dll
 C:\Users\melqu\Google Drive\WEB\Visual Studio\padrao\padrao.Interface\obj\Release\padrao.Interface.pdb
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Interface\bin\Release\padrao.Interface.dll.config
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Interface\bin\Release\padrao.Interface.dll
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Interface\bin\Release\padrao.Interface.pdb
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Interface\bin\Release\EntityFramework.dll
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Interface\bin\Release\EntityFramework.SqlServer.dll
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Interface\bin\Release\padrao.Entidade.dll
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Interface\bin\Release\padrao.Entidade.pdb
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Interface\bin\Release\padrao.Entidade.dll.config
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Interface\bin\Release\EntityFramework.xml
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Interface\bin\Release\EntityFramework.SqlServer.xml
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Interface\obj\Release\padrao.Interface.csprojAssemblyReference.cache
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Interface\obj\Release\padrao.Interface.csproj.CoreCompileInputs.cache
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Interface\obj\Release\padrao.Interface.csproj.CopyComplete
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Interface\obj\Release\padrao.Interface.dll
+F:\GIT\WEB\C_SHARP_PROJECTS\padrao\padrao.Interface\obj\Release\padrao.Interface.pdb

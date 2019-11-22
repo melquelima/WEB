@@ -1,0 +1,6 @@
+F:\GIT\WEB\C_SHARP_PROJECTS\ClassLibrary1\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+F:\GIT\WEB\C_SHARP_PROJECTS\ClassLibrary1\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+F:\GIT\WEB\C_SHARP_PROJECTS\ClassLibrary1\ClassLibrary1\obj\Debug\minhaDll.csprojAssemblyReference.cache
+F:\GIT\WEB\C_SHARP_PROJECTS\ClassLibrary1\ClassLibrary1\obj\Debug\minhaDll.csproj.CoreCompileInputs.cache
+F:\GIT\WEB\C_SHARP_PROJECTS\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+F:\GIT\WEB\C_SHARP_PROJECTS\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.pdb

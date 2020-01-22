@@ -15,7 +15,7 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
 
-            //teste1();
+            teste1();
             //teste2();
             Image img = Image.FromFile(@"IMG_7980.png");
             img = resize(img,100,100);
